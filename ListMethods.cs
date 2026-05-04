@@ -13,7 +13,7 @@ namespace Race
         }
 
 
-        public static RaceResults GetFastestCar(List<RaceResults> results)
+        public static RaceResults? GetFastestCar(List<RaceResults> results)
         {
             return results.OrderBy(r => r.fastestLap).FirstOrDefault();
         }

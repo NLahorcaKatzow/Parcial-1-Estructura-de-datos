@@ -5,7 +5,7 @@ namespace Race
     {
         public int position { get; set; }
         public int carNumber { get; set; }
-        public string racerName { get; set; }
+        public required string racerName { get; set; }
         public float totalTime { get; set; }
         public float fastestLap { get; set; }
     }

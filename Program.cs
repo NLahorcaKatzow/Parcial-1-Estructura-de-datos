@@ -1,6 +1,6 @@
 using System;
 using Race;
-public class main
+public class Program
 {
     public static void Main(string[] args)
     {
@@ -34,8 +34,8 @@ public class main
         Console.WriteLine(ListMethods.GetRacerTable(sortedResults));
 
         Console.WriteLine("Fastest car:");
-        //crea la tabla de resultados
-        RaceResults fastestCar = ListMethods.GetFastestCar(results);
-        Console.WriteLine("The fastest car is: " + fastestCar.racerName + " with a time of " + ListMethods.FormatTime(fastestCar.totalTime));
+        //crea la tabla de vuelta mas rapida
+        RaceResults? fastestCar = ListMethods.GetFastestCar(results);
+        if (fastestCar != null) Console.WriteLine("The fastest car is: " + fastestCar.racerName + " with a time of " + ListMethods.FormatTime(fastestCar.totalTime));
     }
 }
